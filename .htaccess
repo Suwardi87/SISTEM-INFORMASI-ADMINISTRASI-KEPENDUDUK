@@ -1,0 +1,9 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Prevent direct access to existing files and directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirect all other requests to index.php, preserving the original query string
+RewriteRule ^(.*)$ index.php/$1 [L,QSA]
