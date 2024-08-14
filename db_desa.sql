@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 12, 2024 at 01:57 AM
+-- Generation Time: Aug 14, 2024 at 08:13 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -54,7 +54,7 @@ CREATE TABLE `kelahiran` (
 --
 
 INSERT INTO `kelahiran` (`id_kelahiran`, `nama`, `hari`, `tempat_lahir`, `tanggal_lahir`, `pukul`, `jenis_kelahiran`, `anak_ke`, `jenis_kelamin`, `alamat`, `berat_bayi`, `panjang_bayi`, `nik_ayah`, `nama_ayah`, `pekerjaan_ayah`, `alamat_ayah`, `nik_ibu`, `nama_ibu`, `pekerjaan_ibu`, `alamat_ibu`) VALUES
-(18, 'NAURA', 'Selasa', 'Simpang Empat', '2023-06-15', '11:30:00', '', '', 'Perempuan', 'Air Runding', '', '', '', 'Dasri Watan HSB', '', '', '', 'Junisra', '', ''),
+(18, 'NAURA', '1', 'Simpang Empat', '2023-06-15', '11:30:00', '', '', 'Laki Laki', 'Air Runding ', '', '', '', 'Dasri Watan HSB', 'petani', '', '', 'Junisra', 'ibu Rumah Tangga', ''),
 (19, 'Nawaitu Zahra', 'Senin', 'Simpang Empat', '2023-03-22', '18:31:00', '', '', 'Perempuan', 'Simpang', '', '', '', 'Rajab Lubis', '', '', '', 'Pitra Yahani', '', ''),
 (20, 'Muhammad Aslama Syan', 'Rabu', 'Kabupaten Pasaman Barat', '2024-05-21', '21:45:00', '', '', 'Laki Laki', 'Air Runding', '', '', '', 'Saplisar', '', '', '', 'Elma Yanti', '', ''),
 (21, 'Willy Saputra', 'Jumat', 'Air Runding', '2021-02-01', '10:00:00', '', '', 'Laki Laki', 'Simpang', '', '', '', 'Alizar', '', '', '', 'Rikahani', '', ''),
@@ -63,7 +63,7 @@ INSERT INTO `kelahiran` (`id_kelahiran`, `nama`, `hari`, `tempat_lahir`, `tangga
 (24, 'Tiara Lestari', 'Selasa', 'Air Balam', '2021-12-16', '22:21:00', '', '', 'Perempuan', 'Simpang', '', '', '', 'Antoni', '', '', '', 'Mahyuni', '', ''),
 (25, 'Dedi Wahyudi', 'Rabu', 'Air Runding', '2020-07-31', '13:30:00', '', '', 'Laki Laki', 'Air Runding', '', '', '', 'Saipul', '', '', '', 'Ratna', '', ''),
 (26, 'Izzati Adilla', 'Sabtu', 'Simpang', '2019-10-13', '10:36:00', '', '', 'Perempuan', 'Simpang', '', '', '', 'Aswat', '', '', '', 'Hartati', '', ''),
-(27, 'Sahira', 'Kamis', 'Air Runding', '2024-02-01', '00:00:00', '', '', 'Perempuan', 'Air Runding', '', '', '', 'Rijal', '', '', '', 'Cinda', '', '');
+(27, 'Sahira', '1', 'Air Runding', '2024-02-01', '00:00:00', '', '', 'Laki Laki', 'Air Runding ', '', '', '', 'Rijal', 'wrausaha', '', '', 'Cinda', 'ibu Rumah Tangga', '');
 
 -- --------------------------------------------------------
 
@@ -72,6 +72,7 @@ INSERT INTO `kelahiran` (`id_kelahiran`, `nama`, `hari`, `tempat_lahir`, `tangga
 --
 
 CREATE TABLE `kematian` (
+  `nik` varchar(16) NOT NULL,
   `nama` varchar(50) NOT NULL,
   `tempat_lahir` varchar(20) NOT NULL,
   `tanggal_lahir` varchar(10) NOT NULL,
@@ -88,17 +89,18 @@ CREATE TABLE `kematian` (
 -- Dumping data for table `kematian`
 --
 
-INSERT INTO `kematian` (`nama`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `agama`, `pekerjaan`, `alamat`, `hari_wafat`, `pukul`, `keterangan`) VALUES
-('Sutardi', '', '25', 'Laki Laki', '', '', 'Simpang', 'jumat', '00:00:00', ''),
-('Maisaroh', '', '53', 'Perempuan', '', '', 'Air Runding', 'Rabu', '00:00:00', ''),
-('Teti Astuti', '', '37', 'Perempuan', '', '', 'Air Runding', 'Selasa', '00:00:00', ''),
-('Rahayu', '', '18', 'Perempuan', '', '', 'Simpang', 'Rabu', '00:00:00', ''),
-('Miftahul Jannah', '', '32', 'Perempuan', '', '', 'Simpang', 'Sabtu', '00:00:00', ''),
-('Yandra', '', '22', 'Laki Laki', '', '', 'Air Runding', 'Kamis', '00:00:00', ''),
-('Ibrahim', '', '16', 'Laki Laki', '', '', 'Simpang', 'Sabtu', '00:00:00', ''),
-('Edwira', '', '31', 'Laki Laki', '', '', 'Air Runding', 'jumat', '00:00:00', ''),
-('Nasrul Putra', '', '11', 'Laki Laki', '', '', 'Air Runding', 'Kamis', '00:00:00', ''),
-('Murhayati', '', '63', 'Perempuan', '', '', 'Air Runding', 'Senin', '00:00:00', '');
+INSERT INTO `kematian` (`nik`, `nama`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `agama`, `pekerjaan`, `alamat`, `hari_wafat`, `pukul`, `keterangan`) VALUES
+('', 'Sutardi', '', '25', 'Laki Laki', '', '', 'Simpang', 'jumat', '00:00:00', ''),
+('', 'Maisaroh', '', '53', 'Perempuan', '', '', 'Air Runding', 'Rabu', '00:00:00', ''),
+('', 'Teti Astuti', '', '37', 'Perempuan', '', '', 'Air Runding', 'Selasa', '00:00:00', ''),
+('', 'Rahayu', '', '18', 'Perempuan', '', '', 'Simpang', 'Rabu', '00:00:00', ''),
+('', 'Miftahul Jannah', '', '32', 'Perempuan', '', '', 'Simpang', 'Sabtu', '00:00:00', ''),
+('', 'Yandra', '', '22', 'Laki Laki', '', '', 'Air Runding', 'Kamis', '00:00:00', ''),
+('', 'Ibrahim', '', '16', 'Laki Laki', '', '', 'Simpang', 'Sabtu', '00:00:00', ''),
+('', 'Edwira', '', '31', 'Laki Laki', '', '', 'Air Runding', 'jumat', '00:00:00', ''),
+('', 'Nasrul Putra', '', '11', 'Laki Laki', '', '', 'Air Runding', 'Kamis', '00:00:00', ''),
+('', 'Murhayati', '', '63', 'Perempuan', '', '', 'Air Runding', 'Senin', '00:00:00', ''),
+('1304014112970004', 'Sapu', 'tidak tsu', '21', 'Laki Laki', 'Kristen', 'gf', 'x', 'jumat', '00:57:00', '');
 
 -- --------------------------------------------------------
 
@@ -150,7 +152,7 @@ CREATE TABLE `penduduk` (
 --
 
 INSERT INTO `penduduk` (`nik`, `no_kk`, `nama`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `jorong`, `agama`, `status_perkawinan`, `pendidikan`, `pekerjaan`, `status`, `golongan_darah`, `kewarganegaraan`) VALUES
-(1201040410130001, 1312082405190005, 'Samsul Bahri', 'Pinangsori', '2013-12-03', 'Laki Laki', 'Simpang', 'Jorong Simpang', 'Islam', 'Belum Menikah', 'SD', 'Tidak Bekerja', 'Tetap', 'O', 'Indonesia'),
+(1201040410130001, 1312082405190005, 'Samsul Bahri', 'Pinangsori', '2013-12-03', 'Laki Laki', 'Simpang   ', 'Jorong Simpang', 'Islam', 'Belum Menikah', 'SD', 'Tidak Bekerja', 'Tetap', 'O', 'Indonesia'),
 (1202041402870003, 1312082701220001, 'Rajab Lubis', 'Perancis', '1987-03-16', 'Laki Laki', 'Simpang', 'Jorong Simpang', 'Islam', 'Menikah', 'SMA', 'Petani', 'Tetap', 'O', 'Indonesia'),
 (1213084404750002, 1312080805100014, 'Linda Sari', 'Bandarejo', '1998-05-04', 'Perempuan', 'Simpang', 'Jorong Simpang', 'Islam', 'Menikah', 'SD', 'Ibu Rumah Tangga', 'Tetap', 'A', 'Indonesia'),
 (1312050811040002, 1213081921170003, 'Ade Saputra', 'Simpang', '1980-03-12', 'Laki Laki', 'Simpang', 'Jorong Simpang', 'Islam', 'Menikah', 'SD', 'Petani', 'Tetap', 'AB', 'Indonesia'),
@@ -390,7 +392,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `kelahiran`
 --
 ALTER TABLE `kelahiran`
-  MODIFY `id_kelahiran` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id_kelahiran` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT for table `skck`
 --
