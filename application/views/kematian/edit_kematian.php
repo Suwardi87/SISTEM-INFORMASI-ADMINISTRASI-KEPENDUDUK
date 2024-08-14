@@ -4,7 +4,7 @@
             <div class="box-header">
                 <h4 style="text-align:center">
                     <b style="line-height:25px">
-                        TAMBAH DATA KEMATIAN <br>
+                        EDIT DATA KEMATIAN <br>
                     </b>
                 </h4>
                 <hr>
